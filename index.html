@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Limiteds Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .item {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .item p {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .price {
+      color: green;
+      margin-bottom: 10px;
+    }
+    .buy-btn {
+      background: #0078d7;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .buy-btn:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Roblox Limiteds Market</h1>
+  <div class="grid">
+    <!-- CF -->
+    <div class="item">
+      <img src="images/CF.webp" alt="The Classic Roblox Fedora">
+      <p>The Classic Roblox Fedora</p>
+      <div class="price">$500</div>
+      <button class="buy-btn" onclick="buyItem('The Classic Roblox Fedora')">Buy</button>
+    </div>
+
+    <!-- Country Morning -->
+    <div class="item">
+      <img src="images/Country Morning.webp" alt="Country Morning">
+      <p>Country Morning</p>
+      <div class="price">$120</div>
+      <button class="buy-btn" onclick="buyItem('Country Morning')">Buy</button>
+    </div>
+
+    <!-- FF (Fuchsia Fantastique) -->
+    <div class="item">
+      <img src="images/FF.webp" alt="Fuchsia Fantastique">
+      <p>Fuchsia Fantastique</p>
+      <div class="price">$250</div>
+      <button class="buy-btn" onclick="buyItem('Fuchsia Fantastique')">Buy</button>
+    </div>
+
+    <!-- Valk (Valkyrie Helm) -->
+    <div class="item">
+      <img src="images/Valk.webp" alt="Valkyrie Helm">
+      <p>Valkyrie Helm</p>
+      <div class="price">$400</div>
+      <button class="buy-btn" onclick="buyItem('Valkyrie Helm')">Buy</button>
+    </div>
+  </div>
+
+  <script>
+    function buyItem(itemName) {
+      let confirmPurchase = confirm(`Do you want to buy "${itemName}"?`);
+      if (confirmPurchase) {
+        alert(`You bought ${itemName}!`);
+      } else {
+        alert(`Purchase canceled for ${itemName}.`);
+      }
+    }
+  </script>
+</body>
+</html>
